@@ -47,10 +47,7 @@ def CheckURI(uri, timeout=5):
         return False
 
 class ThreadHTTPServer(ThreadingMixIn, http.server.HTTPServer):
-    """docstring for ThreadHTTPServer"""
-    def __init__(self, arg):
-        super(ThreadHTTPServer, self).__init__()
-        self.arg = arg
+    "This is an HTTPServer that supports thread-based concurrency."
         
 
 
