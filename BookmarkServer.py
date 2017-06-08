@@ -104,7 +104,7 @@ class Shortener(http.server.BaseHTTPRequestHandler):
                 "Couldn't fetch URI '{}'. Sorry!".format(longuri).encode())
 
 if __name__ == '__main__':
-    post = int(os.environ.get('PORT', 8080))
+    post = int(os.environ.get('PORT', 8000))
     server_address = ('', 8000)
     httpd = ThreadHTTPServer(server_address, Shortener)
     httpd.serve_forever()
